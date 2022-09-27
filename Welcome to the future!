@@ -10,7 +10,7 @@ import matplotlib.pyplot as mpp #импорт пакета matplotlib
 if __name__=='__main__': #main function
     arguments = numpy.arange(0, 200, 0.1) #возвращает одномерный массив с равномерно разнесенными значениями внутри заданного интервала
     mpp.plot( #функция для отображения графика
-        arguments, #объект для отображения всех данных, связанных с графиком
-        [math.cos(a) * math.cos(a/20.0) for a in arguments] # двумерная координатная ось декартовой системы
+        arguments,
+        [math.cos(a) * math.cos(a/20.0) for a in arguments] 
     )
     mpp.show()#показать график
