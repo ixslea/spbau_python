@@ -1,45 +1,39 @@
-import itertools
+"""Задание: создать класс, объекты которого могут бесконечно выдавать числа Фибоначчи"""
+from math import sqrt
 
-first_6_fibs = [1, 1, 2, 3, 5, 8]
-class Fib6:    
-    """По объектам этого класса можно итерироваться и получать 6 чисел Фибоначчи"""
+fibs = [] # Лист для хранения чисел Фибоначчи
 
-    class _Fib6_iter:
+class Fib:
+    """По объектам этого класса можно итерироваться и получать числа Фибоначчи"""
+
+    class _Fib_iter:
+
         """Внутренний класс — итератор"""
         def __init__(self):
             self.i = 0
-            self.fibs = first_6_fibs # они у нас выше были
+            self.fibs = fibs # Подключение листа для чисел Фибоначчи
 
-        def add(self, a):
+        def __add__(self, a):
+            """Функция, добавляющая в лист элемент"""
             self.fibs.append(a)
-        
-        def __next__(self):
 
-            #if self.i >= 20:            # Если хочется остановиться на каком-то числе
-                #raise StopIteration()
-            if self.i >= 6:
-                j = self.i
-                self.i += 1
-                p = self.fibs[j-2]
-                l = self.fibs[j-1]
-                p, l = l, p+l
-                self.add(l)
-                return self.fibs[j]
-            else:
-                j = self.i # Вывод первых 6 изначальных чисел из списка
-                self.i += 1
-                return self.fibs[j]
+        def __next__(self):
+            """Функция, вычисляющая числа Фибоначчи и возвращающая их"""
+            if self.i >= 20:            # Если хочется остановиться на каком-то числе
+                raise StopIteration()
+            j = self.i
+            self.i += 1
+            finding_fib = int((((1+sqrt(5))**j)-((1-sqrt(5)))**j)/(2**j*sqrt(5))) # Формула вычисления числа Фибоначчи
+            self.__add__(finding_fib)
+            return self.fibs[j]
+
 
     def __iter__(self):
         """Создать и вернуть итератор"""
-        return Fib6._Fib6_iter()
+        return Fib._Fib_iter()
 
-f6 = Fib6()
+f = Fib()
 
-# Вывод - бесконечный
-for f in f6:
-   print(f)
-
-
-
-
+# Вывод
+for fib in f:
+    print(fib)
