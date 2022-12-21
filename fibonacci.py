@@ -21,8 +21,6 @@ class Fib:
         return Fib._Fib_iter()
 
 
-f = Fib()
-
 # Вывод
 for fib in islice(Fib(), 20):
     print(fib)
