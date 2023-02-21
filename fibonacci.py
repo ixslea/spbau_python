@@ -1,6 +1,6 @@
 """Задание: создать класс, объекты которого могут бесконечно выдавать числа Фибоначчи"""
 from math import sqrt
-
+from itertools import islice
 
 class Fib:
     """По объектам этого класса можно итерироваться и получать числа Фибоначчи"""
@@ -11,8 +11,6 @@ class Fib:
 
         def __next__(self):
             """Функция, вычисляющая числа Фибоначчи и возвращающая их"""
-            if self.i >= 20:            # Если хочется остановиться на каком-то числе
-                raise StopIteration()
             j = self.i
             self.i += 1
             finding_fib = int((((1+sqrt(5))**j)-((1-sqrt(5)))**j)/(2**j*sqrt(5)))   # Формула вычисления числа Фибоначчи
@@ -23,8 +21,6 @@ class Fib:
         return Fib._Fib_iter()
 
 
-f = Fib()
-
 # Вывод
-for fib in f:
+for fib in islice(Fib(), 20):
     print(fib)
