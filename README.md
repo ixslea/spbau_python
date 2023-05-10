@@ -1,13 +1,13 @@
 # SPbAU Python assignments by ixslea!
 
-* 1 term https://github.com/ixslea/spbau_python/tree/main/1%20sem
-* 2 term
+* [1 term](1_sem)
+* [2 term](2_sem)
 
 ## Latest assignments:
 
-* PyQt6 application
+* [PyQt6 application](2_sem/PyQt6)
 
-* flask application 
-    - url: 
+* [flask application](2_sem/flask_app) 
+    - url: https://vercel.com/ixslea/spbau-python-web
 
 
