@@ -8,6 +8,6 @@
 * [PyQt6 application](2_sem/PyQt6)
 
 * [flask application](2_sem/flask_app) 
-    - url: https://vercel.com/ixslea/spbau-python-web
+    - url: [https://vercel.com/ixslea/spbau-python-web](https://spbau-python-web.vercel.app/)
 
 
