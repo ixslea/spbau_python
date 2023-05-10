@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Google Fots -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Remixicon Icon -->
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Main CSS -->
+    <link href="{{url_for('static', filename='styles/main.css')}}" rel="stylesheet">
+    <title>ixslea - About me</title>
+  </head>
+  <body>
+    
+    <!-- main -->
+    <main class="pge-wrap">
+      <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-12  col-md-12  col-lg-10  col-xl-10  col-xxl-10">
+                <!-- About -->
+                <div class="ds-about-section text-center">
+                    <h2 class="ds-heading-inner ds-boder_text"><span>About me</span></h2>
+                    <div class="text-center ds-back-home">
+                    <a class="ds-back-to-home" href="home"><i class="ri-home-8-line"></i></a>
+                    </div>
+                    <section class="text-left ds-left-right-section" >
+                        <img src="{{url_for('static', filename='lol.jpg')}}">
+                        <div class="row">
+                          <div class="col-12 col-sm-12  col-md-12  col-lg-12  col-xl-12  col-xxl-12 d-flex justify-content-between align-items-center margin-60">
+                              <section>
+                                <h3 class="ds-hedding">ixslea</h3>
+                                <span class="ds-tools">I'm a SPbAU student</span>
+                              </section>
+                          </div>
+                          <div class="col-12 col-sm-12  col-md-12  col-lg-12  col-xl-12  col-xxl-12">
+                            <p>Ordinary student, interested in computer science, games and design.</p>
+                          </div>
+                        </div>
+                    </section>
+                </div>
+                <!-- Case Studies -->
+            </div>
+          </div>
+      </div>
+    </main>
+    <!-- main -->
+    <!-- footer -->
+    <footer class="ds-footer padding-0-about">
+      <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-12 col-sm-12  col-md-12  col-lg-10  col-xl-10  col-xxl-10">
+                <section class="ds-lets_section">
+                  <h4>Let’s Talk.</h4>
+                  <span>Have a question? Send me a message.</span>
+                </section>
+              
+                <div class="ds-email_social">
+                  <a href="mailto:mpodstava@gmail.com" class="ds-email ds-boder_text"><span>mpodstava@gmail.com</span></a>
+                    <ul class="ds-social">
+                      <li><a href="https://github.com/ixslea" target="_blanck"><i class="ri-github-line"></i></a></li>
+                      <li><a href="" target="_blanck"><i class="ri-telegram-line"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+          </div>
+      </div>
+    </footer>
+    <!-- footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
