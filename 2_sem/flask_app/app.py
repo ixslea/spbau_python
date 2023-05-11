@@ -4,7 +4,6 @@ app = Flask(__name__, template_folder="templates", static_folder="static", stati
 
 """Homepage"""
 
-@app.route('/home/')
 @app.route('/')
 def root():
     return render_template(
@@ -18,5 +17,3 @@ def about():
     return render_template(
         'about.html'
     )
-
-
